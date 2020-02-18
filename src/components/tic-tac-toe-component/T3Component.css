@@ -1,0 +1,9 @@
+.gameboard {
+    max-width:200px;margin:auto;text-align:center;
+  }
+  .gameboard table {
+    border:2px solid #000;color:#000;
+  }
+  .gameboard table td {
+    height:50px;width:50px;font-size:40px;font-weight:bold;text-align:center;border:1px solid #000;
+  }
