@@ -1,12 +1,8 @@
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import {NavbarComponent} from '../../components/navbar-component/NavbarComponent';
 
 export const apiLogin = async (username: string, password: string) => {
-     let credentials = {
-         username,
-         password
-     }
+   
    
     try {
         // const response = await fetch('http://3.81.82.21:2020/login', {
@@ -18,17 +14,17 @@ export const apiLogin = async (username: string, password: string) => {
         //     }
         // })
         const response = await axios.post('http://localhost:8080/Snappy/auth.app', {
-            username: username, 
-            password: password
+            username, 
+            password
         
         })
 
         if (response.status === 200) {
             const body = await response.data
-            console.log(response)
+            console.log(body)
             sessionStorage.setItem("user", body);
             return {
-                NavbarComponent,
+                body,
                 loginMessage: 'successful login'
             }
         } else if (response.status === 401) {

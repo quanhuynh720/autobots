@@ -1,21 +1,20 @@
 import React from 'react';
 import axios from 'axios';
-//import URL from '../../utilities/axiosConfig';
 
 
 export default class DeletePost extends React.Component {
   state = {
-    id: '',
+    postId: ''
   }
 
   handleChange = (event:any) => {
-    this.setState({ id: event.target.value });
+    this.setState({ postId: event.target.value });
   }
 
   handleSubmit = (event:any) => {
     event.preventDefault();
 
-    axios.delete(`https://jsonplaceholder.typicode.com/posts/${this.state.id}`)
+    axios.delete(`http://localhost:8080/Snappy/${this.state.postId}/deletePost.app`)
       .then(res => {
         console.log(res);
         console.log(res.data);

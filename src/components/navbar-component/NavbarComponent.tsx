@@ -38,31 +38,22 @@ export const NavbarComponent = (props:any) => {
                 Links
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
-                  <Link to='/chucknorris'>ChuckNorris</Link>
-                </DropdownItem>
-                <DropdownItem>
-                  <Link to='/pokemon'>Pokemon</Link>
-                </DropdownItem>
-                <DropdownItem>
-                  <Link to='/clicker'>Clicker</Link>
-                </DropdownItem>
-                <DropdownItem>
-                  <Link to='/starwars'>StarWars</Link>
-                </DropdownItem>
-                <DropdownItem>
-                  <Link to='/tic-tac-toe'>Tic-Tac-Toe</Link>
-                </DropdownItem> 
+
+                
                 <DropdownItem>
                   <Link to='/registry'>Registry</Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link to='/post'>Feed</Link>
+                  <Link to='/friendsList'>Friends List</Link>
                 </DropdownItem>
+                <DropdownItem>
+                  <Link to='/postList'>Feed</Link>
+                </DropdownItem>
+
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Don't look here please</NavbarText>
+          <NavbarText>Fuck me</NavbarText>
         </Collapse>
       </Navbar>
     </div>

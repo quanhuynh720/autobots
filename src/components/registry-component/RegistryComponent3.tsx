@@ -44,7 +44,6 @@ export default class Registry extends React.Component {
   handleSubmit = (event:any) => {
     event.preventDefault();
 
-
     axios.post(`http://localhost:8080/Snappy/addUser.app`, {
       firstname: this.state.firstname,
       lastname: this.state.lastname,

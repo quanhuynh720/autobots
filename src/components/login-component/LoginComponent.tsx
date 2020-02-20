@@ -1,10 +1,17 @@
 import React, { SyntheticEvent } from 'react';
 import { Form, Label, Col, Input, FormGroup, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { history } from '../../utilities/history';
 
-interface ILoginState {
-    username: string
-    password: string
+export interface ILoginState {
+    userId: number,
+    firstname: string,
+    lastname: string,
+    username: string,
+    email: string,
+    password: string,
+    bio: string,
+    url: string
     
 }
 
@@ -18,8 +25,14 @@ export class LoginComponent extends React.Component<ILoginProps, ILoginState>{
     constructor(props: any) {
         super(props)
         this.state = {
+            userId: 1,
+            firstname: '',
+            lastname: '',
             username: '',
+            email: '',
             password: '',
+            bio: '',
+            url: ''
         }
         //by putting event binding and data binding together, we achieve something called two way data binding
         //this is where the user can update state and if state is updated the user sees the change
@@ -48,6 +61,7 @@ export class LoginComponent extends React.Component<ILoginProps, ILoginState>{
     submitLogin = async (event: SyntheticEvent) => {
         event.preventDefault()
         this.props.updateCurrentUser(this.state.username,this.state.password)
+        history.push('/postList');
     }
 
     render() {

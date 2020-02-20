@@ -1,5 +1,5 @@
-import { apiLogin } from "../remote/garden-book/garden-book-clients"
-
+import { apiLogin } from "../remote/LoginAPI"
+import {history} from '../utilities/history';
 
 export const loginTypes = {
     SUCCESSFUL_LOGIN: 'LOGIN_SUCCESSFUL_LOGIN',
@@ -16,6 +16,9 @@ export const updateCurrentUser = (username:string, password:string) => async (di
                 currentUser:response.body
             }
         })
+
+        history.push('/postList');
+
     }else {
         dispatch({
             type:loginTypes.UNSUCCESSFUL_LOGIN,
