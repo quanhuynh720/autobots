@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { Button, Form, FormGroup, Label, Input, FormText,Col } from 'reactstrap';
+
 
 export default class Registry extends React.Component {
      state = {
@@ -63,37 +65,63 @@ export default class Registry extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            First Name:
-            <input type="text" name="firstname" onChange={this.inputFirstname} />
-          </label>
-          <label>
-            Last Name:
-            <input type="text" name="lastname" onChange={this.inputLastname} />
-          </label>
-          <label>
-            Username:
-            <input type="text" name="username" onChange={this.inputUsername} />
-          </label>
-          <label>
-            Email:
-            <input type="text" name="email" onChange={this.inputEmail} />
-          </label>
-          <label>
-            Password:
-            <input type="text" name="password" onChange={this.inputPassword} />
-          </label>
-          <label>
-            Bio:
-            <input type="text" name="bio" onChange={this.inputBio} />
-          </label>
-          <label>
-            Profile Pic:
-            <input type="file" name="url" onChange={this.inputUrl} />
-          </label>
-          <button type="submit">Add</button>
-        </form>
+        <Form onSubmit={this.handleSubmit}>
+        <FormGroup row>
+          <Label sm={2}>First Name:</Label>
+          <Col sm={6} >
+          <Input type="text" name="firstname" onChange={this.inputFirstname} />
+          </Col> 
+        </FormGroup>
+
+        <FormGroup row>
+          <Label sm={2}>Last Name:</Label>
+          <Col sm={6} >
+          <Input type="text" name="lastname" onChange={this.inputLastname} />
+          </Col> 
+        </FormGroup>
+
+        <FormGroup row>
+          <Label sm={2}>User Name:</Label>
+          <Col sm={6} >
+          <Input type="text" name="username" onChange={this.inputUsername} />
+          </Col> 
+        </FormGroup>
+
+        <FormGroup row>
+          <Label sm={2}>Email:</Label>
+          <Col sm={6} >
+          <Input type="text" name="email" onChange={this.inputEmail} />
+          </Col> 
+        </FormGroup>
+
+        
+        <FormGroup row>
+          <Label sm={2}>Password:</Label>
+          <Col sm={6} >
+          <Input type="text" name="password" onChange={this.inputPassword}  />
+          </Col> 
+        </FormGroup>
+
+        <FormGroup row>
+          <Label sm={2}>Bio:</Label>
+          <Col sm={6} >
+          <Input type="text" name="bio" onChange={this.inputBio}  />
+          </Col> 
+        </FormGroup>
+
+            <FormGroup row>
+            <Label sm={2}>Profile Pic:</Label>
+            <Col sm={6} >
+            <Input type="file" name="url" onChange={this.inputUrl} />
+            </Col>
+            </FormGroup>
+
+            <FormGroup check row>
+        <Col sm={{ size: 10, offset: 0}}>
+          <Button type="submit">Add</Button>
+          </Col>
+      </FormGroup>
+        </Form>
       </div>
     )
   }

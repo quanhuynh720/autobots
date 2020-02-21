@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import {history} from '../../utilities/history';
+import { Button, Form, FormGroup, Label, Input, FormText,Col } from 'reactstrap';
+
 
     export interface IConnectUser {
       user?: any
@@ -51,17 +53,31 @@ import {history} from '../../utilities/history';
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Write Post:
-            <input type="text" name="newPost" onChange={this.inputText} />
-          </label>
-          <label>
-            Insert Picture:
-            <input type="text" name="newPost" onChange={this.inputPic} />
-          </label>
-          <button type="submit">Add</button>
-        </form>
+        <Form onSubmit={this.handleSubmit}>
+
+        <FormGroup row>
+          <Label sm={2}>Write Post:</Label>
+          <Col sm={6} >
+          <Input type="text" name="newPost" onChange={this.inputText} />
+          </Col> 
+        </FormGroup>
+
+
+        <FormGroup row>
+          <Label sm={2}>Insert Picture:</Label>
+          <Col sm={6} >
+          <Input type="text" name="newPost" onChange={this.inputPic} />
+          </Col> 
+        </FormGroup>
+
+          
+          
+        <FormGroup check row>
+        <Col sm={{ size: 10, offset: 0}}>
+          <Button type="submit">Add</Button>
+          </Col>
+      </FormGroup>
+        </Form>
       </div>
     )
   }

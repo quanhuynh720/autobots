@@ -23,16 +23,19 @@ export const NavbarComponent = (props:any) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Howdy Fagiolis!</NavbarBrand>
+        <NavbarBrand href="/">Snappy</NavbarBrand>
         <NavbarToggler onClick={toggle} />
+
         <Collapse isOpen={isOpen} navbar>
+
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <Link to='/login'>Login</Link>
+
+          <NavItem>
+              <Link to='/login'>login</Link>
             </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/tatoelpato/Snappy">GitHub</NavLink>
-            </NavItem>
+
+       
+          
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Links
@@ -56,7 +59,7 @@ export const NavbarComponent = (props:any) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Fuck me</NavbarText>
+         
         </Collapse>
       </Navbar>
     </div>
