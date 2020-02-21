@@ -31,7 +31,7 @@ export const NavbarComponent = (props:any) => {
           <Nav className="auto" navbar>
 
             <NavItem>
-              <Link to='/login'>login</Link>
+              <NavLink href='/login'>login</NavLink>
             </NavItem>
 
        
@@ -44,16 +44,16 @@ export const NavbarComponent = (props:any) => {
 
                 
                 <DropdownItem>
-                  <Link to='/registry'>Registry</Link>
+                  <NavLink href='/registry'>Registry</NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link to='/friendsList'>Friends List</Link>
+                  <NavLink href='/friendsList'>Friends List</NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link to='/postList'>Feed</Link>
+                  <NavLink href='/postList'>Feed</NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link to='/userProfile'>My Profile </Link>
+                  <NavLink href='/userProfile'>My Profile </NavLink>
                 </DropdownItem>
 
               </DropdownMenu>
