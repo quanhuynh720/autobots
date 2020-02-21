@@ -28,9 +28,9 @@ export const NavbarComponent = (props:any) => {
 
         <Collapse isOpen={isOpen} navbar>
 
-          <Nav className="mr-auto" navbar>
+          <Nav className="auto" navbar>
 
-          <NavItem>
+            <NavItem>
               <Link to='/login'>login</Link>
             </NavItem>
 

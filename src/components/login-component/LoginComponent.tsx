@@ -70,7 +70,7 @@ export class LoginComponent extends React.Component<ILoginProps, ILoginState>{
                 <Form onSubmit={this.submitLogin}>
                     <FormGroup row>
                         <Label for="exampleUsername" sm={2}>Username</Label>
-                        <Col sm={10}>
+                        <Col sm={6}>
                             <Input required
                                 type="text"
                                 name="Username"
@@ -83,7 +83,7 @@ export class LoginComponent extends React.Component<ILoginProps, ILoginState>{
                     </FormGroup>
                     <FormGroup row>
                         <Label for="examplePassword" sm={2}>Password</Label>
-                        <Col sm={10}>
+                        <Col sm={6}>
                             <Input required
                                 type="password"
                                 name="password"
