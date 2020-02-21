@@ -2,11 +2,11 @@ import React from 'react';
 import axios from 'axios';
 import {history} from '../../utilities/history';
 
-    interface IConnectUser {
+    export interface IConnectUser {
       user?: any
     }
 
-    interface IPostState {
+    export interface IPostState {
       post_text: string,
       url: string 
     }
@@ -19,8 +19,6 @@ import {history} from '../../utilities/history';
           url: ''
         };
     }
-
-    
 
   inputText = (event:any) => {
     this.setState({ 
@@ -36,7 +34,7 @@ import {history} from '../../utilities/history';
 
   handleSubmit = (event:any) => {
     event.preventDefault();
-    
+
 
     axios.post(`http://localhost:8080/Snappy/addPost.app`, { 
         post_text: this.state.post_text,

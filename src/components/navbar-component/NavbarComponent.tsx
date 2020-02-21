@@ -49,6 +49,9 @@ export const NavbarComponent = (props:any) => {
                 <DropdownItem>
                   <Link to='/postList'>Feed</Link>
                 </DropdownItem>
+                <DropdownItem>
+                  <Link to='/userProfile'>My Profile </Link>
+                </DropdownItem>
 
               </DropdownMenu>
             </UncontrolledDropdown>

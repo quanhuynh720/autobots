@@ -2,16 +2,18 @@ import { IUserState } from "."
 import { loginTypes } from "../action-mappers/login-actions";
 
 const initialState:IUserState = {
-    currentUser: {
-        userId: 1,
-        firstname: '',
-        lastname: '',
-        username: '',
-        email: '',
-        password: '',
-        bio: '',
-        url: ''
-    },
+    currentUser:
+     {
+         userId: 1,
+         firstname: '',
+         lastname: '',
+         username: '',
+         email: '',
+         password: '',
+         bio: '',
+         url: ''
+     }
+    ,
     loginMessage:''
 }
 

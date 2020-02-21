@@ -1,4 +1,4 @@
-export default interface IUser {
+interface IUser {
     userId: number;
     firstname: string;
     lastname: string;
@@ -8,3 +8,4 @@ export default interface IUser {
     bio: string;
     url: string;
 }
+export default IUser

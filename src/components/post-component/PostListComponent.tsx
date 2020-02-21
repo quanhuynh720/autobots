@@ -3,8 +3,19 @@ import axios from 'axios'
 
 import DeletePost from './DeletePostComponent';
 import MakePost from './MakePostComponent';
+import LikePost from './LikePostComponent';
 
-export default class PostList extends React.Component {
+//  interface IConnectUser {
+//    user: any
+//  }
+
+// interface IPostState {
+//   post_text: string,
+//   url: string 
+// }
+
+
+export class PostList extends React.Component {
   state = {
     posts: []
     }
@@ -26,8 +37,12 @@ export default class PostList extends React.Component {
         return (
           <div className="post card" key={post.postId}>
             <div className="card-content">
+
+            <span className="card-title">{}</span>
                <span className="card-title">{post.postId}</span>
               <p>{post.post_text}</p>
+              <p>{post.likes}</p>
+              <LikePost/>
             </div>
           </div>
         )
@@ -48,4 +63,6 @@ export default class PostList extends React.Component {
     )
   }
 }
+
+export default PostList
 

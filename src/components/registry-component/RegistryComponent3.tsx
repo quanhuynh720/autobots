@@ -90,7 +90,7 @@ export default class Registry extends React.Component {
           </label>
           <label>
             Profile Pic:
-            <input type="text" name="url" onChange={this.inputUrl} />
+            <input type="file" name="url" onChange={this.inputUrl} />
           </label>
           <button type="submit">Add</button>
         </form>

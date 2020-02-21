@@ -96,7 +96,7 @@ export class LoginComponent extends React.Component<ILoginProps, ILoginState>{
                     <Button color="danger">Login</Button>
                 </Form>
                 <p>{this.props.loginMessage}</p>
-                <Link to='/pokemon'>Forgot Password?</Link>
+                <Link to='/passwordReset'>Forgot Password?</Link>
             </div>
         )
     }
